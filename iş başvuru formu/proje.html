@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İş Başvuru Formu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff8c00, #000000);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+        .form-wrapper {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 30px;
+            border-radius: 16px;
+            max-width: 500px;
+            width: 100%;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .form-wrapper h2 {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #fff;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        label {
+            color: #e6e6e6;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.85);
+            transition: all 0.3s ease;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            box-shadow: 0 0 8px #4A90E2;
+            background: #fff;
+        }
+
+        button {
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #4A90E2, #2a7bc7);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #6db3f2, #4A90E2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-inline {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .form-inline label {
+            color: white;
+            cursor: pointer;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-wrapper">
+        <h2>İş Başvuru Formu</h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="ad">Ad</label>
+                <input type="text" id="ad" name="ad" required />
+            </div>
+            <div class="form-group">
+                <label for="soyad">Soyad</label>
+                <input type="text" id="soyad" name="soyad" required />
+            </div>
+            <div class="form-group">
+                <label for="email">E-posta</label>
+                <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+                <label for="dogum-tarihi">Doğum Tarihi</label>
+                <input type="date" id="dogum-tarihi" name="dogum-tarihi" required />
+            </div>
+            <div class="form-group">
+                <label for="dogum-yeri">Doğum Yeri</label>
+                <select id="dogum-yeri" name="dogum-yeri" required>
+                    <option value="">Şehir seçin</option>
+                    <option>Adana</option>
+                    <option>Adıyaman</option>
+                    <option>Afyonkarahisar</option>
+                    <option>Ağrı</option>
+                    <option>Amasya</option>
+                    <option>Ankara</option>
+                    <option>Antalya</option>
+                    <option>Artvin</option>
+                    <option>Aydın</option>
+                    <option>Balıkesir</option>
+                    <option>Bilecik</option>
+                    <option>Bingöl</option>
+                    <option>Bitlis</option>
+                    <option>Bolu</option>
+                    <option>Burdur</option>
+                    <option>Bursa</option>
+                    <option>Çanakkale</option>
+                    <option>Çankırı</option>
+                    <option>Çorum</option>
+                    <option>Denizli</option>
+                    <option>Diyarbakır</option>
+                    <option>Edirne</option>
+                    <option>Elazığ</option>
+                    <option>Erzincan</option>
+                    <option>Erzurum</option>
+                    <option>Eskişehir</option>
+                    <option>Gaziantep</option>
+                    <option>Giresun</option>
+                    <option>Gümüşhane</option>
+                    <option>Hakkari</option>
+                    <option>Hatay</option>
+                    <option>Isparta</option>
+                    <option>Mersin</option>
+                    <option>İstanbul</option>
+                    <option>İzmir</option>
+                    <option>Kars</option>
+                    <option>Kastamonu</option>
+                    <option>Kayseri</option>
+                    <option>Kırklareli</option>
+                    <option>Kırşehir</option>
+                    <option>Kocaeli</option>
+                    <option>Konya</option>
+                    <option>Kütahya</option>
+                    <option>Malatya</option>
+                    <option>Manisa</option>
+                    <option>Kahramanmaraş</option>
+                    <option>Mardin</option>
+                    <option>Muğla</option>
+                    <option>Muş</option>
+                    <option>Nevşehir</option>
+                    <option>Niğde</option>
+                    <option>Ordu</option>
+                    <option>Rize</option>
+                    <option>Sakarya</option>
+                    <option>Samsun</option>
+                    <option>Siirt</option>
+                    <option>Sinop</option>
+                    <option>Sivas</option>
+                    <option>Tekirdağ</option>
+                    <option>Tokat</option>
+                    <option>Trabzon</option>
+                    <option>Tunceli</option>
+                    <option>Şanlıurfa</option>
+                    <option>Uşak</option>
+                    <option>Van</option>
+                    <option>Yozgat</option>
+                    <option>Zonguldak</option>
+                    <option>Aksaray</option>
+                    <option>Bayburt</option>
+                    <option>Karaman</option>
+                    <option>Kırıkkale</option>
+                    <option>Batman</option>
+                    <option>Şırnak</option>
+                    <option>Bartın</option>
+                    <option>Ardahan</option>
+                    <option>Iğdır</option>
+                    <option>Yalova</option>
+                    <option>Karabük</option>
+                    <option>Kilis</option>
+                    <option>Osmaniye</option>
+                    <option>Düzce</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Cinsiyet</label>
+                <div class="form-inline">
+                    <label><input type="radio" name="cinsiyet" value="erkek" required /> Erkek</label>
+                    <label><input type="radio" name="cinsiyet" value="kadın" /> Kadın</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Yabancı Diller</label>
+                <div class="form-inline">
+                    <label><input type="checkbox" name="diller" value="İngilizce" /> İngilizce</label>
+                    <label><input type="checkbox" name="diller" value="Almanca" /> Almanca</label>
+                    <label><input type="checkbox" name="diller" value="Fransızca" /> Fransızca</label>
+                    <label><input type="checkbox" name="diller" value="Arapça" /> Arapça</label>
+                    <label><input type="checkbox" name="diller" value="İspanyolca" /> İspanyolca</label>
+                    <label><input type="checkbox" name="diller" value="Rusça" /> Rusça</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="askerlik">Askerlik Durumu</label>
+                <select id="askerlik" name="askerlik">
+                    <option>Seçiniz</option>
+                    <option value="tecilli">Tecilli</option>
+                    <option value="muaf">Muaf</option>
+                    <option value="yapıldı">Yapıldı</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="egitim">Eğitim Durumu</label>
+                <select id="egitim" name="egitim">
+                    <option>Lise</option>
+                    <option>Ön Lisans</option>
+                    <option>Lisans</option>
+                    <option>Yüksek Lisans</option>
+                    <option>Doktora</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="gecmis">Kendinizi kısaca tanıtın:</label>
+                <textarea id="gecmis" name="gecmis" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="cv">CV Yükle</label>
+                <input type="file" id="cv" name="cv" accept=".pdf" required />
+            </div>
+            <button type="submit">Gönder</button>
+        </form>
+    </div>
+</body>
+
+</html>
